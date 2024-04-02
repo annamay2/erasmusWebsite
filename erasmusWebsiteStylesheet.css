@@ -7,10 +7,13 @@ header {
 	padding-bottom: 10px;
 }
 
+/* Website background colour */
 body {
 	background: rgb(2, 41, 37);
 }
 
+
+/* Navigation Bar */
 .navbar {
 	background-color: #333;
 	position: relative;
@@ -35,7 +38,7 @@ body {
 	text-decoration: none;
 }
 
-/* Style the dropdown menu */
+/* Navbar dropdown buttons */
 .navbar ul ul {
 	position: absolute;
 	top: 100%;
@@ -50,12 +53,12 @@ body {
 	display: block;
 }
 
-/* Change the background color of dropdown links on hover */
 .navbar ul ul li a:hover {
 	background-color: white;
 	color: rgb(2, 41, 37);
 }
 
+/* Heading to denote the current page */
 #subheading {
 	position: absolute;
 	float: left;
@@ -64,8 +67,12 @@ body {
 	font-size: 30px;
 }
 
-* {box-sizing:border-box}
+/* Allow elements to be sized*/
+* {
+	box-sizing:border-box
+}
 
+/* Image on each cover page */
 .coverImage {
 	width: 500px;
 	display: block;
@@ -75,6 +82,7 @@ body {
 	border: solid white 10px;
 }
 
+/* Container for captions and week buttons */
 .main {
 	display: block;
 	background-color: white;
@@ -83,6 +91,7 @@ body {
 	margin-right: auto;
 }
 
+/* Caption under cover images */
 .bio {
 	display: block;
 	color: rgb(2, 41, 37);
@@ -95,6 +104,7 @@ body {
 	width: 1000px;
 }
 
+/* Caption under slideshows */
 .caption {
 	display: block;
 	color: rgb(2, 41, 37);
@@ -106,6 +116,7 @@ body {
 	width: 1000px;
 }
 
+/* Reorient cover image on the free time page */
 #freeTimeCoverImage, #freeTimeCaption {
 	margin-top: 40px;
 }
@@ -152,7 +163,7 @@ body {
   display: none;
 }
 
-/* Next & previous buttons */
+/* Next and previous buttons */
 .prev {
   cursor: pointer;
   position: absolute;
@@ -188,7 +199,7 @@ body {
   	right: -80px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* On hover, add a white background and change arrow colour */
 .prev:hover, .next:hover {
   background-color: white;
   color: rgb(2, 41, 37);
@@ -206,16 +217,7 @@ body {
   background: white;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
+/* Selector dots */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -227,6 +229,7 @@ body {
   transition: background-color 0.6s ease;
 }
 
+/* When on image referred to by dot, or when hovering over dot, change colour */
 .active, .dot:hover {
   background-color: #717171;
 }

@@ -2,13 +2,16 @@
 
 <html>
 
+<!-- Link stylesheet -->
 <link rel=stylesheet href=erasmusWebsiteStylesheet.css>
 
+	<!-- Website title and subheading -->
 	<header>
 		<div id=subheading>Free Time - Week 3</div>
 		<div id=heading>My Erasmus+ Experience in Leipzig</div>
 	</header>
 
+	<!-- Navbar -->
 	<nav class="navbar">
 	<ul>
 		<li><a href="erasmusHome.html">Home</a></li>
@@ -16,6 +19,7 @@
 		<li>
 			<a href="erasmusPractice.html">Practice</a>
 
+			<!-- Practice Page Dropdown -->
 			<ul>
 				<li><a href="erasmusPracticeW1.html">Week 1</a></li>
 				<li><a href="erasmusPracticeW2.html">Week 2</a></li>
@@ -28,6 +32,7 @@
 		<li>
 			<a href="erasmusFreeTime.html">Free Time</a>
 
+			<!-- Free Time Page Dropdown -->
 			<ul>
 				<li><a href="erasmusFreeTimeW1.html">Week 1</a></li>
 				<li><a href="erasmusFreeTimeW2.html">Week 2</a></li>
@@ -42,11 +47,12 @@
 </nav>
 
 	<body>
-							<!-- Slideshow container -->
+		
+		<!-- Slideshow container -->
 		<div class="slideshow-container">
 
-		  <!-- Full-width images with number and caption text -->
-		  
+		  <!-- Images and caption text -->
+		
 		  <div class="mySlides fade">
 		    <img src="https://i.pinimg.com/736x/98/09/bf/9809bfd582014bfdae4191a4790b7a1a.jpg" style="width:100%">
 		    <div class="text">Dresden Hauptbahnhof</div>
@@ -97,13 +103,13 @@
 		    <div class="text">The River Elme from the viewing point</div>
 		  </div>
 
-		  <!-- Next and previous buttons -->
+		  <!-- Previous and Next buttons -->
 		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 		</div>
 		<br>
 
-		<!-- The dots/circles -->
+		<!-- Indicator Dots -->
 		<div style="text-align:center">
 		  <span class="dot" onclick="currentSlide(1)"></span>
 		  <span class="dot" onclick="currentSlide(2)"></span>
@@ -118,6 +124,7 @@
 
 		</div>
 
+		<!-- Slideshow Javascript -->
 		<script>
 		let slideIndex = 1;
 		showSlides(slideIndex);
@@ -127,7 +134,7 @@
 		  showSlides(slideIndex += n);
 		}
 
-		// Thumbnail image controls
+		// Image controls
 		function currentSlide(n) {
 		  showSlides(slideIndex = n);
 		}
