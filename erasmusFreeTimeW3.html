@@ -42,6 +42,113 @@
 </nav>
 
 	<body>
+							<!-- Slideshow container -->
+		<div class="slideshow-container">
+
+		  <!-- Full-width images with number and caption text -->
+		  
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/98/09/bf/9809bfd582014bfdae4191a4790b7a1a.jpg" style="width:100%">
+		    <div class="text">Dresden Hauptbahnhof</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/a2/77/89/a277893f4da68febab810d1ff664acb3.jpg" style="width:100%">
+		    <div class="text">Streetart in Dresden</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/38/da/3f/38da3f47cad4dd5bd84b3a58ed152084.jpg" style="width:100%">
+		    <div class="text">Travelling to Bad Schandau by ferry down the River Elme</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/7b/b2/c1/7bb2c11c3143f1bd02bdd29d1ab743dc.jpg" style="width:100%">
+		    <div class="text">The 20th century architecture of Bad Schandau</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/b5/e0/0c/b5e00c4aa25097073df2ad90f2fcbfc6.jpg" style="width:100%">
+		    <div class="text">The church in the town</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/d8/af/79/d8af791a78fe6c19222cd606bb647534.jpg" style="width:100%">
+		    <div class="text">Guesthouse near the Sächsische Schweiz National Park</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/bc/eb/e9/bcebe95dd322886bb859ffea75899a61.jpg" style="width:100%">
+		    <div class="text">Rock formations in the National Park</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/ea/2a/3a/ea2a3a80a6c85ec1929401c143f48a66.jpg" style="width:100%">
+		    <div class="text">Steps through the woods</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/8a/87/e1/8a87e1248ca34b20451949370a2db2e0.jpg" style="width:100%">
+		    <div class="text">Hiking to a viewing point in the park</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/f3/92/72/f392724be0508b56e39340b68055a3b1.jpg" style="width:100%">
+		    <div class="text">The River Elme from the viewing point</div>
+		  </div>
+
+		  <!-- Next and previous buttons -->
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span>
+		  <span class="dot" onclick="currentSlide(2)"></span>
+		  <span class="dot" onclick="currentSlide(3)"></span>
+		  <span class="dot" onclick="currentSlide(4)"></span>
+		  <span class="dot" onclick="currentSlide(5)"></span>
+		  <span class="dot" onclick="currentSlide(6)"></span>
+		  <span class="dot" onclick="currentSlide(7)"></span>
+		  <span class="dot" onclick="currentSlide(8)"></span>
+		  <span class="dot" onclick="currentSlide(9)"></span>
+		  <span class="dot" onclick="currentSlide(10)"></span>
+
+		</div>
+
+		<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		// Next/previous controls
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+		</div>
 
 	</body>
 

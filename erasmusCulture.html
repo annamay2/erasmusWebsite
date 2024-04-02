@@ -42,7 +42,89 @@
 </nav>
 
 	<body>
+					<!-- Slideshow container -->
+		<div class="slideshow-container">
 
+		  <!-- Full-width images with number and caption text -->
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/ef/85/ca/ef85cab538bf587b1b93ac6f989e2863.jpg" style="width:100%">
+		    <div class="text">Taking a tour of the historical sights in Leipzig</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/90/df/8d/90df8dcbdb0634f1525586444d2b3109.jpg" style="width:100%">
+		    <div class="text">Statue of Johann Bach, a famous composer, outside the St. Thomas Cathedral</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/cc/df/fe/ccdffe786ea65357c8e5d90f69887fe0.jpg" style="width:100%">
+		    <div class="text">The Commerzbank, decorated in gold paint, a symbol of the city's prosperous past</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/d1/aa/b0/d1aab066400306efc3e17e4a0451afb0.jpg" style="width:100%">
+		    <div class="text">The Old Town Hall which now houses Stadtgeschichtliches Museum Leipzig</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/72/d5/7f/72d57fe809a71ce8ff22dcd724eeb939.jpg" style="width:100%">
+		    <div class="text">The New Town Hall, the current seat of Leipzig's government</div>
+		  </div>
+
+		   <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/73/60/db/7360db762aa3369e58a708cabd2e8f37.jpg" style="width:100%">
+		    <div class="text">A festival in the Augustuplatz Square</div>
+		  </div>
+
+
+		  <!-- Next and previous buttons -->
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span>
+		  <span class="dot" onclick="currentSlide(2)"></span>
+		  <span class="dot" onclick="currentSlide(3)"></span>
+		  <span class="dot" onclick="currentSlide(4)"></span>
+		  <span class="dot" onclick="currentSlide(5)"></span>
+		  <span class="dot" onclick="currentSlide(6)"></span>
+
+		</div>
+
+		<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		// Next/previous controls
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+		</div>
 	</body>
 
 </html>

@@ -42,6 +42,76 @@
 </nav>
 
 	<body>
+							<!-- Slideshow container -->
+		<div class="slideshow-container">
+
+		  <!-- Full-width images with number and caption text -->
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/fb/0d/bb/fb0dbb0c7e177961f34ae393efd8753f.jpg" style="width:100%">
+		    <div class="text">Visiting the Augustuplatz Square festival</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/fb/d6/ae/fbd6ae80ca7442071d64aa9498ebaf0a.jpg" style="width:100%">
+		    <div class="text">Shopping in Leipzig shopping centre</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/16/12/73/16127304dd4276d4784d1b9b87efc316.jpg" style="width:100%">
+		    <div class="text">In a club in Leipzig</div>
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="https://i.pinimg.com/736x/3b/9d/37/3b9d3738bb933f4f73209795726d193f.jpg" style="width:100%">
+		    <div class="text">Dinner in a Vietnamese restaurant called Pholosophy</div>
+		  </div>
+
+		  <!-- Next and previous buttons -->
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span>
+		  <span class="dot" onclick="currentSlide(2)"></span>
+		  <span class="dot" onclick="currentSlide(3)"></span>
+		  <span class="dot" onclick="currentSlide(4)"></span>
+
+		</div>
+
+		<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		// Next/previous controls
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+		</div>
 
 	</body>
 
