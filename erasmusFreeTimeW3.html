@@ -124,7 +124,7 @@
 
 		</div>
 
-				<!-- Slideshow Javascript -->
+		<!-- Slideshow Javascript -->
 		<script>
 		let slideIndex = 1;
 		showSlides(slideIndex);
@@ -134,30 +134,33 @@
 		  showSlides(slideIndex += n);
 		}
 
-		// Change image by clicking dots
+		// Change slide by clicking dots
 		function currentSlide(n) {
 		  showSlides(slideIndex = n);
 		}
 
 		function showSlides(n) {
-		  let i
-		// Retrieving slides and dots from HTML as arrays
+		  let i;
+
+		  // Retrieving slides and dots from HTML as arrays
 		  let slides = document.getElementsByClassName("mySlides");
 		  let dots = document.getElementsByClassName("dot");
-		// Reaching either end of the slideshow causes the current slide to loop to the opposite side
+
+		  // Reaching either end of the slideshow causes the current slide to loop to the opposite side
 		  if (n > slides.length) {slideIndex = 1}
 		  if (n < 1) {slideIndex = slides.length}
 
-		// Set all slides to not be displayed
+		  // Set all slides to not be displayed
 		  for (i = 0; i < slides.length; i++) {
 		    slides[i].style.display = "none";
 		  }
-		// Set all dots to not be active
+
+		  // Set all dots to not be active
 		  for (i = 0; i < dots.length; i++) {
 		    dots[i].className = dots[i].className.replace(" active", "");
 		  }
 
-		// Set current slide to be visible and current dot to be active
+		  // Set current slide to be visible and current dot to be active
 		  slides[slideIndex-1].style.display = "block";
 		  dots[slideIndex-1].className += " active";
 		}
